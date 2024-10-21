@@ -1,0 +1,101 @@
+ /* Globální styly */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header a navigace */
+header {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+/* Hamburger menu pro menší zařízení */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Skryté menu pro mobilní verzi */
+.menu.mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #2c3e50;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu.mobile a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #34495e;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Aktivace mobilního menu */
+.menu.mobile.active {
+    display: flex;
+}

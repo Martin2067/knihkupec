@@ -1,0 +1,89 @@
+ /* Globální styly pro tělo stránky */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sekce 1 - Uvítání */
+.section1 {
+    background-color: #6c7b8a;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section1 h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section1 p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sekce 2 - Flexbox knihy */
+.section2 {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.book-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px); /* Flexbox pro 3 knihy na řádek */
+    max-width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.book-card .content {
+    padding: 20px;
+}
+
+.book-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.book-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Responzivní styly */
+@media (max-width: 1024px) {
+    .book-card {
+        flex: 1 1 calc(50% - 20px); /* Dvě knihy na řádek pro menší obrazovky */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        flex: 1 1 100%; /* Jedna kniha na řádek pro mobilní zařízení */
+        max-width: 100%;
+    }
+}
+    
